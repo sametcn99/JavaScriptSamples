@@ -99,6 +99,16 @@ list.addEventListener("click", function (e) {
   so the next line of code removes its parent element (the list item) 
   from the DOM using the remove() method. */
     e.target.parentNode.remove(); // if it is, remove the parent element (list item) from the DOM
+
+    /*This code snippet is a part of a function that handles the deletion of tasks from two arrays, unCompletedTasks and completedTasks.*/
+    let indexToDelete = unCompletedTasks.indexOf(e.target.parentNode.textContent);
+    if (indexToDelete > -1) { // Check if the string is found in the array
+      unCompletedTasks.splice(indexToDelete, 1); // Remove the element at the index
+    }
+    else {
+      let indexToDelete = completedTasks.indexOf(e.target.parentNode.textContent);
+      completedTasks.splice(indexToDelete, 1); // Remove the element at the index
+    }
   }
 });
 
