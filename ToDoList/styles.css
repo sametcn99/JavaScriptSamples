@@ -1,0 +1,152 @@
+body {
+  background-color: rgb(18, 16, 36);
+}
+
+.center {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-top: -50px;
+  /* yükseklik / 2 */
+  margin-left: -100px;
+  /* genişlik / 2 */
+  width: 300px;
+  height: 200px;
+  word-wrap: break-word;
+  /* wrap the text at the end of the line */
+  color: white;
+}
+
+#input {
+  width: 220px;
+}
+
+input::placeholder {
+  color: #1c87c9;
+  opacity: 1;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.delete-btn {
+  margin-left: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  float: right;
+  font-size: 20px;
+}
+
+.add-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  color: black;
+  font-size: 18px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.complete {
+  text-decoration: line-through;
+  background-color: dimgrey;
+}
+
+/*This code styles a widget element by setting its position to fixed, making it a flex container with a column direction, 
+centering its items both horizontally and vertically, giving it a height and width of 200px, setting its background color 
+to a semi-transparent light gray, giving it rounded corners, and setting its font family and text color to white.*/
+.widget {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  background-color: #f2f2f217;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.time {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.date {
+  margin-top: 16px;
+  font-size: 24px;
+}
+
+.footer {
+  bottom: 0;
+  /* position the text at the bottom of the container */
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  position: fixed;
+}
+
+.footer a {
+  color: #4caf50;
+  font-size: 14px;
+}
+
+input:focus::placeholder {
+  /*Hide placeholder when input is clicked*/
+  opacity: 0;
+}
+
+
+@media only screen and (max-width: 630px) {
+
+  /* For desktop: */
+  .widget {
+    width: auto;
+    height: auto;
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .time {
+    font-size: 25px;
+  }
+
+  .date {
+    font-size: 17px;
+  }
+
+  .center {
+    width: auto;
+    height: auto;
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
